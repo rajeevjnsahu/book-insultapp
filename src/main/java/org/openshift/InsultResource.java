@@ -13,8 +13,9 @@ public class InsultResource {
   @GET()
   @Produces("application/json")
   public HashMap<String, String> getInsult() {
-    HashMap<String, String> theInsult = new HashMap<String, String>();
+    HashMap<String, String> theInsult = new HashMap<>();
     theInsult.put("insult", new InsultGenerator().generateInsult());
+    theInsult.put("githubhook", "Tested");
     return theInsult;
   }
 }
